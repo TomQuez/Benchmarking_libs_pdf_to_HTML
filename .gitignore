@@ -1,2 +1,3 @@
 outputs/*.html
 pdf_samples/*.pdf
+.venv/

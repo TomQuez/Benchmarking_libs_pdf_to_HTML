@@ -22,3 +22,10 @@ Ensure you have the following installed:
 ```bash
 git clone https://github.com/<your-username>/<repository-name>.git
 cd <repository-name>
+```
+
+### Create a virtual env for python
+
+```bash
+python3 -m venv .venv
+```
