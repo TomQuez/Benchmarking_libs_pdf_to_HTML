@@ -36,7 +36,7 @@ conda activate yourEnvName
 
 ```
 
-## Using Mineru
+## Using MinerU
 
 ### install MinerU
 
