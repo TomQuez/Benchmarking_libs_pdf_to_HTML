@@ -24,8 +24,32 @@ git clone https://github.com/<your-username>/<repository-name>.git
 cd <repository-name>
 ```
 
-### Create a virtual env for python
+### Create a conda virtual env
+
+refer to <https://docs.anaconda.com/miniconda/install/#quick-command-line-install>
+It's recommended to create a specific conda environment with these commands :
 
 ```bash
-python3 -m venv .venv
+conda deactivate
+conda create --name yourEnvName python=3.10
+conda activate yourEnvName
+
+```
+
+## Using Mineru
+
+### install MinerU
+
+Ensure that your conda virtual env is activated.
+
+```bash
+pip install -U magic-pdf[full] --extra-index-url https://wheels.myhloli.com
+```
+
+Initial download of models files :
+
+```bash
+pip install huggingface_hub
+wget https://github.com/opendatalab/MinerU/raw/master/scripts/download_models_hf.py -O download_models_hf.py
+python download_models_hf.py
 ```
