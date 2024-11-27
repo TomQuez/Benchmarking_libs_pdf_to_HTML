@@ -5,8 +5,11 @@ This repository benchmarks various libraries for converting PDF files into HTML.
 ## Project Overview
 
 The aim of this project is to:
+
 - Compare multiple libraries for PDF to HTML conversion.
+
 - Evaluate performance based on fidelity, structure preservation, and ease of use.
+
 - Generate outputs compatible with the [TipTap](https://tiptap.dev/) editor used in a React-based application.
 
 ## Setup
@@ -20,8 +23,8 @@ Ensure you have the following installed:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/<repository-name>.git
-cd <repository-name>
+git clone git@github.com:TomQuez/Benchmarking_libs_pdf_to_HTML.git
+cd Benchmarking_libs_pdf_to_HTML
 ```
 
 ### Create a conda virtual env
