@@ -36,7 +36,14 @@ It's recommended to create a specific conda environment with these commands :
 conda deactivate
 conda create --name yourEnvName python=3.10
 conda activate yourEnvName
+pip install -r requirements.txt
 
+```
+
+you can use the init_env.sh script to activate your env:
+
+```bash
+source ./init_env.sh
 ```
 
 ## Using MinerU
@@ -52,7 +59,6 @@ pip install -U magic-pdf[full] --extra-index-url https://wheels.myhloli.com
 Initial download of models files :
 
 ```bash
-pip install huggingface_hub
 wget https://github.com/opendatalab/MinerU/raw/master/scripts/download_models_hf.py -O download_models_hf.py
 python download_models_hf.py
 ```
