@@ -31,6 +31,7 @@ cd Benchmarking_libs_pdf_to_HTML
 ### Create a conda virtual env
 
 refer to <https://docs.anaconda.com/miniconda/install/#quick-command-line-install>
+
 It's recommended to create a specific conda environment with these commands :
 
 ```bash
@@ -41,7 +42,7 @@ pip install -r requirements.txt
 
 ```
 
-you can use the init_env.sh script to activate your env:
+Use the init_env.sh script to activate your env:
 
 ```bash
 source ./init_env.sh
