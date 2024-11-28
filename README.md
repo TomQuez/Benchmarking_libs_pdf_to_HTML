@@ -50,6 +50,9 @@ source ./init_env.sh
 
 ### install MinerU
 
+MinerU documentation : 
+<https://mineru.readthedocs.io/en/latest/>
+
 Ensure that your conda virtual env is activated.
 
 ```bash
