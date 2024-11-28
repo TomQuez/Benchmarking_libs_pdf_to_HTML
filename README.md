@@ -67,3 +67,9 @@ Initial download of models files :
 wget https://github.com/opendatalab/MinerU/raw/master/scripts/download_models_hf.py -O download_models_hf.py
 python download_models_hf.py
 ```
+
+Execute this command to test the MinerU script on your pdf documents:
+
+```bash
+python3 scripts/pdf_to_html_MinerU.py  
+```
