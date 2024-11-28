@@ -28,7 +28,7 @@ git clone git@github.com:TomQuez/Benchmarking_libs_pdf_to_HTML.git
 cd Benchmarking_libs_pdf_to_HTML
 ```
 
-### Create a conda virtual env
+### Create a conda virtual env (not mandatory but recommended)
 
 Refer to <https://docs.anaconda.com/miniconda/install/#quick-command-line-install>
 
