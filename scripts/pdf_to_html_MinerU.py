@@ -72,6 +72,7 @@ try:
                             image_bytes = img_file.read()
 
                         # Pass the image through OCRPipe for table or text extraction
+                        # image_writer=None raise an error, but we don't need to save the images after this process. It avoids double saving.
                         image_ocr = OCRPipe(
                             image_bytes,
                             {"_pdf_type": "", "model_list": []},
