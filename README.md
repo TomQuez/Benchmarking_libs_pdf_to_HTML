@@ -17,6 +17,7 @@ The aim of this project is to:
 ### Prerequisites
 
 Ensure you have the following installed:
+
 - **Python** (version 3.8+ recommended)
 - Any required dependencies for the libraries being tested (e.g., `pdf2htmlEX`, `pdfminer.six`).
 
@@ -50,7 +51,7 @@ source ./init_env.sh
 
 ### install MinerU
 
-MinerU documentation : 
+MinerU documentation :
 <https://mineru.readthedocs.io/en/latest/>
 
 Ensure that your conda virtual env is activated.
