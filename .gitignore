@@ -1,5 +1,5 @@
 outputs/*.html
 outputs/*.md
 outputs/*
-
+pdf_samples/*
 .venv/

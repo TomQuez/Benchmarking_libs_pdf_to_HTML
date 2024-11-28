@@ -17,8 +17,9 @@ The aim of this project is to:
 ### Prerequisites
 
 Ensure you have the following installed:
+
 - **Python** (version 3.8+ recommended)
-- Any required dependencies for the libraries being tested (e.g., `pdf2htmlEX`, `pdfminer.six`).
+- Any required dependencies for the libraries being tested (see below).
 
 ### Clone the Repository
 
@@ -27,9 +28,10 @@ git clone git@github.com:TomQuez/Benchmarking_libs_pdf_to_HTML.git
 cd Benchmarking_libs_pdf_to_HTML
 ```
 
-### Create a conda virtual env
+### Create a conda virtual env (not mandatory but recommended)
 
-refer to <https://docs.anaconda.com/miniconda/install/#quick-command-line-install>
+Refer to <https://docs.anaconda.com/miniconda/install/#quick-command-line-install>
+
 It's recommended to create a specific conda environment with these commands :
 
 ```bash
@@ -40,7 +42,7 @@ pip install -r requirements.txt
 
 ```
 
-you can use the init_env.sh script to activate your env:
+Use the init_env.sh script to activate your env:
 
 ```bash
 source ./init_env.sh
@@ -49,6 +51,9 @@ source ./init_env.sh
 ## Using MinerU
 
 ### install MinerU
+
+MinerU documentation :
+<https://mineru.readthedocs.io/en/latest/>
 
 Ensure that your conda virtual env is activated.
 
