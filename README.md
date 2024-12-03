@@ -21,6 +21,13 @@ Ensure you have the following installed:
 - **Python** (version 3.8+ recommended)
 - Any required dependencies for the libraries being tested (see below).
 
+Run these commands :
+
+```bash
+sudo apt update
+sudo apt install libgl1-mesa-glx -y
+```
+
 ### Clone the Repository
 
 ```bash
@@ -47,6 +54,7 @@ source ~/.bashrc
 exec bash
 ```
 
+This should activate the "base" conda environment.
 It's recommended to create a specific conda environment with these commands :
 
 ```bash
@@ -81,6 +89,14 @@ Initial download of models files :
 pip install huggingface_hub
 wget https://github.com/opendatalab/MinerU/raw/master/scripts/download_models_hf.py -O download_models_hf.py
 python3 download_models_hf.py
+```
+
+If you have a GPU with more than 8GB of VRAM, and CUDA change the device-mode to cuda in the magic-pdf.json (see MinerU documentation):
+
+```json
+{
+    "device-mode":"cuda"
+}
 ```
 
 Execute this command to test the MinerU script on your pdf documents:
