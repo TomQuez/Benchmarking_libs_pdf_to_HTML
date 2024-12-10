@@ -102,5 +102,14 @@ If you have a GPU with more than 8GB of VRAM, and CUDA change the device-mode to
 Execute this command to test the MinerU script on your pdf documents:
 
 ```bash
-python3 scripts/pdf_to_html_MinerU.py  
+python3 scripts/pdf_to_html_MinerU.py
+```
+
+## Using Docling
+
+Docling should detect if you have a GPU available.
+
+```bash
+pip install docling
+python3 scripts/pdf_to_html_docling.py
 ```
