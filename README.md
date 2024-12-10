@@ -21,6 +21,13 @@ Ensure you have the following installed:
 - **Python** (version 3.8+ recommended)
 - Any required dependencies for the libraries being tested (see below).
 
+Run these commands :
+
+```bash
+sudo apt update
+sudo apt install libgl1-mesa-glx -y
+```
+
 ### Clone the Repository
 
 ```bash
@@ -32,17 +39,32 @@ cd Benchmarking_libs_pdf_to_HTML
 
 Refer to <https://docs.anaconda.com/miniconda/install/#quick-command-line-install>
 
+After installing, add conda to your $PATH env variable.
+Temporary:
+
+```bash
+export PATH=~/miniconda3/bin:$PATH
+```
+
+Permanently:
+
+```bash
+echo 'export PATH=~/miniconda3/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+exec bash
+```
+
+This should activate the "base" conda environment.
 It's recommended to create a specific conda environment with these commands :
 
 ```bash
 conda deactivate
 conda create --name yourEnvName python=3.10
 conda activate yourEnvName
-pip install -r requirements.txt
 
 ```
 
-Use the init_env.sh script to activate your env:
+Use the init_env.sh script to activate your env (replace the environment name by yours):
 
 ```bash
 source ./init_env.sh
@@ -64,6 +86,7 @@ pip install -U magic-pdf[full] --extra-index-url https://wheels.myhloli.com
 Initial download of models files :
 
 ```bash
+pip install huggingface_hub
 wget https://github.com/opendatalab/MinerU/raw/master/scripts/download_models_hf.py -O download_models_hf.py
 python3 download_models_hf.py
 ```
@@ -72,7 +95,7 @@ If you have a GPU with more than 8GB of VRAM, and CUDA change the device-mode to
 
 ```json
 {
-  "device-mode": "cuda"
+    "device-mode":"cuda"
 }
 ```
 
