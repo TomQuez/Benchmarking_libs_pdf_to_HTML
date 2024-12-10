@@ -65,11 +65,28 @@ Initial download of models files :
 
 ```bash
 wget https://github.com/opendatalab/MinerU/raw/master/scripts/download_models_hf.py -O download_models_hf.py
-python download_models_hf.py
+python3 download_models_hf.py
+```
+
+If you have a GPU with more than 8GB of VRAM, and CUDA change the device-mode to cuda in the magic-pdf.json (see MinerU documentation):
+
+```json
+{
+  "device-mode": "cuda"
+}
 ```
 
 Execute this command to test the MinerU script on your pdf documents:
 
 ```bash
-python3 scripts/pdf_to_html_MinerU.py  
+python3 scripts/pdf_to_html_MinerU.py
+```
+
+## Using Docling
+
+Docling should detect if you have a GPU available.
+
+```bash
+pip install docling
+python3 scripts/pdf_to_html_docling.py
 ```
