@@ -36,7 +36,7 @@ It's recommended to create a specific conda environment with these commands :
 
 ```bash
 conda deactivate
-conda create --name yourEnvName python=3.10
+conda create --name yourEnvName python=3.12
 conda activate yourEnvName
 pip install -r requirements.txt
 
@@ -89,4 +89,10 @@ Docling should detect if you have a GPU available.
 ```bash
 pip install docling
 python3 scripts/pdf_to_html_docling.py
+```
+
+## Usinf Zerox
+
+```bash
+pip install py-zerox
 ```
