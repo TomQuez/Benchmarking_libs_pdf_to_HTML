@@ -18,7 +18,7 @@ The aim of this project is to:
 
 Ensure you have the following installed:
 
-- **Python** (version 3.11 recommended)
+- **Python** version 3.10 recommended to have the laste release of MinerU magic_pdf, 3.11 for the others(documentation will be updated, be careful and try with different virtual env)
 - Any required dependencies for the libraries being tested (see below).
 
 Run these commands :
