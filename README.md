@@ -115,7 +115,7 @@ pip install docling
 python3 scripts/pdf_to_html_docling.py
 ```
 
-## Using Megaparse:
+## Using Megaparse
 
 check Megaparse documentation. this doc is adapted to megaparse 0.0.48
 
