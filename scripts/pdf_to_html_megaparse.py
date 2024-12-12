@@ -5,6 +5,7 @@ from megaparse.parser.unstructured_parser import UnstructuredParser
 import nltk
 import os
 import markdown2
+import time
 
 PDF_INPUT_DIR = os.getenv("PDF_INPUT_DIR", "./pdf_samples/")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./outputs/")
@@ -55,7 +56,9 @@ logger.info(f"Processing PDF files in {PDF_INPUT_DIR}...")
 for filename in os.listdir(PDF_INPUT_DIR):
     if filename.endswith(".pdf"):
         input_path = os.path.join(PDF_INPUT_DIR, filename)
-        output_filename = f"Megaparse_{os.path.splitext(filename)[0]}.html"
+        output_filename = (
+            f"Megaparse_{time.time()}_{os.path.splitext(filename)[0]}.html"
+        )
         output_path = os.path.join(OUTPUT_DIR, output_filename)
 
         try:
