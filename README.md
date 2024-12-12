@@ -18,7 +18,7 @@ The aim of this project is to:
 
 Ensure you have the following installed:
 
-- **Python** (version 3.8+ recommended)
+- **Python** (version 3.11 recommended)
 - Any required dependencies for the libraries being tested (see below).
 
 Run these commands :
@@ -76,6 +76,7 @@ source ./init_env.sh
 
 MinerU documentation :
 <https://mineru.readthedocs.io/en/latest/>
+Mandatory to have python 3.10 to have access to the last version of magic_pdf.
 
 Ensure that your conda virtual env is activated.
 
@@ -95,7 +96,7 @@ If you have a GPU with more than 8GB of VRAM, and CUDA change the device-mode to
 
 ```json
 {
-    "device-mode":"cuda"
+  "device-mode": "cuda"
 }
 ```
 
@@ -113,3 +114,9 @@ Docling should detect if you have a GPU available.
 pip install docling
 python3 scripts/pdf_to_html_docling.py
 ```
+
+## Using Megaparse:
+
+check Megaparse documentation. this doc is adapted to megaparse 0.0.48
+
+This readme file must be updated. Should be done soon.
