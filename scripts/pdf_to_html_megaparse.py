@@ -47,10 +47,7 @@ resources = ["punkt", "averaged_perceptron_tagger"]
 
 for resource in resources:
     if not check_nltk_data(resource):
-        logger.info(f"Downloading the resource '{resource}'...")
-        nltk.download(resource, download_dir=NLTK_DATA_DIR)
-        if not check_nltk_data(resource):
-            raise RuntimeError(f"Failed to download required NLTK resource: {resource}")
+        raise RuntimeError(f"Failed to download required NLTK resource: {resource}")
 
 logger.info("Initializing MegaParse...")
 parser = UnstructuredParser()
