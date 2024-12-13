@@ -35,6 +35,14 @@ git clone git@github.com:TomQuez/Benchmarking_libs_pdf_to_HTML.git
 cd Benchmarking_libs_pdf_to_HTML
 ```
 
+Use a .env file :
+
+```bash
+cp .env.example .env
+```
+
+Update the env variables with the values you need.
+
 ## Using MinerU
 
 ### Create a virtual en adapted to Mineru magig_pdf
@@ -97,6 +105,9 @@ deactivate
 python3.11 -m venv env_megaparse
 source env_megaparse/bin/activate
 pip install megaparse markdown2
+python3 -m nltk.downloader punkt averaged_perceptron_tagger -d /root/nltk_data
+python3 scripts/pdf_to_html_megaparse.py
+
 ```
 
 This readme file must be updated. Should be done soon.
