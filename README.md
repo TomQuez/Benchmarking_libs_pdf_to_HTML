@@ -26,6 +26,7 @@ Run these commands :
 ```bash
 sudo apt update
 sudo apt install libgl1-mesa-glx -y
+sudo apt install popplernan
 ```
 
 ### Clone the Repository
@@ -105,7 +106,7 @@ deactivate
 python3.11 -m venv env_megaparse
 source env_megaparse/bin/activate
 pip install megaparse markdown2
-python3 -m nltk.downloader punkt averaged_perceptron_tagger -d /root/nltk_data
+python3 -m nltk.downloader punkt averaged_perceptron_tagger averaged_perceptron_tagger_eng -d /root/nltk_data
 python3 scripts/pdf_to_html_megaparse.py
 
 ```
