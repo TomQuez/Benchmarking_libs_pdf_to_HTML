@@ -9,7 +9,10 @@ import time
 
 PDF_INPUT_DIR = os.getenv("PDF_INPUT_DIR", "./pdf_samples/")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./outputs/")
+NLTK_DATA_DIR = os.getenv("NLTK_DATA_DIR", "/root/nltk_data")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(NLTK_DATA_DIR, exist_ok=True)
+nltk.data.path.append(NLTK_DATA_DIR)
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -40,12 +43,14 @@ def check_nltk_data(resource_name):
         return False
 
 
-resources = ["punkt_tab", "averaged_perceptron_tagger_eng"]
+resources = ["punkt", "averaged_perceptron_tagger"]
 
 for resource in resources:
     if not check_nltk_data(resource):
         logger.info(f"Downloading the resource '{resource}'...")
-        nltk.download(resource)
+        nltk.download(resource, download_dir=NLTK_DATA_DIR)
+        if not check_nltk_data(resource):
+            raise RuntimeError(f"Failed to download required NLTK resource: {resource}")
 
 logger.info("Initializing MegaParse...")
 parser = UnstructuredParser()
@@ -57,7 +62,7 @@ for filename in os.listdir(PDF_INPUT_DIR):
     if filename.endswith(".pdf"):
         input_path = os.path.join(PDF_INPUT_DIR, filename)
         output_filename = (
-            f"Megaparse_{time.time()}_{os.path.splitext(filename)[0]}.html"
+            f"Megaparse_{int(time.time())}_{os.path.splitext(filename)[0]}.html"
         )
         output_path = os.path.join(OUTPUT_DIR, output_filename)
 
@@ -69,4 +74,7 @@ for filename in os.listdir(PDF_INPUT_DIR):
             with open(output_path, "w", encoding="utf-8") as f:
                 f.write(html_content)
         except Exception as e:
+            error_log_path = os.path.join(OUTPUT_DIR, "error_log.txt")
+            with open(error_log_path, "a") as error_log:
+                error_log.write(f"Error processing {filename}: {e}\n")
             logger.exception(f"Error processing {filename}: {e}")
