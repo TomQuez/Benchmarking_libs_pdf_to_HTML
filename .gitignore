@@ -1,5 +1,5 @@
-outputs/*.html
-outputs/*.md
-outputs/*
-pdf_samples/*
 .venv/
+.env
+pdf_samples/20240830_*.pdf
+env_magic_pdf/
+outputs/Mineru_1734015185.0117652_20240830_*.html
