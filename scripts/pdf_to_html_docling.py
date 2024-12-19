@@ -27,6 +27,7 @@ try:
             pipeline_options.do_ocr = True
             pipeline_options.do_table_structure = True
             pipeline_options.table_structure_options.do_cell_matching = True
+            # FIXME : the picture extraction is not working for some reasons. The issue is being investigated. See https://ds4sd.github.io/docling/examples/custom_convert/ for documentation
             pipeline_options.ocr_options = TesseractOcrOptions()
 
             pipeline_options.table_structure_options.mode = TableFormerMode.ACCURATE
